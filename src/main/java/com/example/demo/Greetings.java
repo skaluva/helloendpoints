@@ -16,7 +16,7 @@ import javax.inject.Named;
     name = "helloworld",
     version = "v1",
     scopes = {Constants.EMAIL_SCOPE},
-    clientIds = {Constants.WEB_CLIENT_ID, Constants.ANDROID_CLIENT_ID, Constants.IOS_CLIENT_ID},
+    clientIds = {Constants.WEB_CLIENT_ID, Constants.ANDROID_CLIENT_ID, Constants.IOS_CLIENT_ID,Constants.API_EXPLORER_CLIENT_ID},
     audiences = {Constants.ANDROID_AUDIENCE}
 )
 public class Greetings {
@@ -48,12 +48,15 @@ public class Greetings {
       responseBuilder.append(greeting.getMessage());
     }
     response.setMessage(responseBuilder.toString());
+     // psf
     return response;
   }
 
   @ApiMethod(name = "greetings.authed", path = "hellogreeting/authed")
   public HelloGreeting authedGreeting(User user) {
     HelloGreeting response = new HelloGreeting("hello " + user.getEmail());
+      
     return response;
   }
+   
 }

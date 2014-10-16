@@ -23,8 +23,7 @@ google.devrel.samples.hello = google.devrel.samples.hello || {};
  * Client ID of the application (from the APIs Console).
  * @type {string}
  */
-google.devrel.samples.hello.CLIENT_ID =
-    'replace this with your web client ID';
+google.devrel.samples.hello.CLIENT_ID =    'light-mountain-734';
 
 /**
  * Scopes used by the application.
